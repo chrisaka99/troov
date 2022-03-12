@@ -1,0 +1,18 @@
+{
+  "name": "troov_front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nuxt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.1",
+    "bootstrap-vue": "^2.21.2",
+    "nuxt": "^2.15.8"
+  }
+}
