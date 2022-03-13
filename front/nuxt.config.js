@@ -1,4 +1,5 @@
 module.exports = {
+    modules: ['@nuxtjs/axios'],
     plugins: [
         '@/plugins/bootstrap-vue',
     ],
@@ -9,5 +10,8 @@ module.exports = {
 
     js: [
         '@/assets/js/bootstrap.min.js'
-    ]
+    ],
+    axios: {
+        // proxy: true
+    }
 }

@@ -1,7 +1,10 @@
 const express = require('express')
 const User = require("../models/User");
 const Item = require('../models/Item')
-const hash = require('../utils/utils')
+const { hash } = require('../utils/utils')
+
+const { login } = require('../utils/utils')
+
 const {
     validateRegister
 } = require("../middleware/user");
@@ -34,6 +37,13 @@ router.post('/addUser', validateRegister, async (req, res, next) => {
                     err.message || "Erreur de création de l'utilisateur",
             });
         });
+});
+
+
+router.post("/login", async function (req, res, next) {
+    login(req.body)
+        .then(user => user ? res.json(user) : res.status(400).json({ message: 'Les identifiants sont incorrects' }))
+        .catch(err => next(err));
 });
 
 

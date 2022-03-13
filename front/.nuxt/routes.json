@@ -6,6 +6,12 @@
     "chunkName": "pages/about"
   },
   {
+    "name": "addItem",
+    "path": "/addItem",
+    "component": "C:\\\\Users\\\\Akach\\\\OneDrive\\\\Documents\\\\codes\\\\troov\\\\front\\\\pages\\\\addItem.vue",
+    "chunkName": "pages/addItem"
+  },
+  {
     "name": "connexion",
     "path": "/connexion",
     "component": "C:\\\\Users\\\\Akach\\\\OneDrive\\\\Documents\\\\codes\\\\troov\\\\front\\\\pages\\\\connexion.vue",

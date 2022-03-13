@@ -10,12 +10,12 @@
           <div class="col-md-10 mx-auto">
             <form v-on:submit.prevent="login" method="POST">
               <div class="form-group">
-                <label for="identif">Identifiant</label>
+                <label for="email">Identifiant</label>
                 <b-form-input
-                  id="identif"
+                  id="email"
                   type="email"
                   autocomplete="off"
-                  v-model="user_id"
+                  v-model="email"
                   required
                 ></b-form-input>
               </div>
@@ -57,7 +57,38 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+export default {
+  name: "Login",
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    async login() {
+      const credentials = {
+        email: this.email,
+        password: this.password,
+      };
+      await axios
+        .post("http://localhost:4000/api/login", credentials)
+        .then((res) => {
+          this.msg = res.data.msg;
+          console.log(res.data.msg);
+          if (res.status === 200) {
+            localStorage.setItem("token", res.data.token);
+            this.$router.push("/addItem");
+          }
+        })
+        .catch((err) => {
+          this.msg = err.response.data.msg;
+          console.log(err.response);
+        });
+    },
+  },
+};
 </script>
 
 <style>
