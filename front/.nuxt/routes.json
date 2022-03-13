@@ -2,13 +2,19 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "C:\\\\Users\\\\Akach\\\\OneDrive\\\\Documents\\\\codes\\\\troov_front\\\\pages\\\\about.vue",
+    "component": "C:\\\\Users\\\\Akach\\\\OneDrive\\\\Documents\\\\codes\\\\troov\\\\front\\\\pages\\\\about.vue",
     "chunkName": "pages/about"
+  },
+  {
+    "name": "connexion",
+    "path": "/connexion",
+    "component": "C:\\\\Users\\\\Akach\\\\OneDrive\\\\Documents\\\\codes\\\\troov\\\\front\\\\pages\\\\connexion.vue",
+    "chunkName": "pages/connexion"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Akach\\\\OneDrive\\\\Documents\\\\codes\\\\troov_front\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\Akach\\\\OneDrive\\\\Documents\\\\codes\\\\troov\\\\front\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   }
 ]
